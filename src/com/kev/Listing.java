@@ -1,11 +1,12 @@
 package com.kev;
 
+import java.util.Comparator;
 import java.util.Date;
 
-public class Listing {
+public class Listing implements Comparable<Listing> {
 
     private Date lastReview;
-    private int pricePerUnit;
+    private Integer pricePerUnit;
     private int quantity;
     private String worldName;
     private int worldId;
@@ -20,11 +21,11 @@ public class Listing {
         this.lastReview = lastReview;
     }
 
-    public int getPricePerUnit() {
+    public Integer getPricePerUnit() {
         return pricePerUnit;
     }
 
-    public void setPricePerUnit(int pricePerUnit) {
+    public void setPricePerUnit(Integer pricePerUnit) {
         this.pricePerUnit = pricePerUnit;
     }
 
@@ -68,6 +69,8 @@ public class Listing {
         this.totalCost = totalCost;
     }
 
+
+
     @Override
     public String toString() {
         return "Listing{" +
@@ -79,5 +82,17 @@ public class Listing {
                 ", hq=" + hq +
                 ", totalCost=" + totalCost +
                 '}';
+    }
+
+    Comparator<Listing> compareByPricePerUnit = new Comparator<Listing>() {
+        @Override
+        public int compare(Listing o1, Listing o2) {
+            return o1.getPricePerUnit().compareTo(o2.getPricePerUnit());
+        }
+    };
+
+    @Override
+    public int compareTo(Listing o) {
+        return o.getPricePerUnit().compareTo(this.getPricePerUnit());
     }
 }

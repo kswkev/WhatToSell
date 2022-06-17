@@ -36,6 +36,7 @@ public class ListingFactory {
     }
 
     public static List<Listing> getListings(int itemId, String world) {
+        System.out.println("Getting listings data for item with id " + itemId + " for world " + world);
         List<Listing> listings = new ArrayList<Listing>();
 
         String string = RestService.fetchDataFrom(RestURLConstants.MARKET_BOARD_CURRENT_DATA + world + "/" + itemId);
@@ -47,6 +48,9 @@ public class ListingFactory {
             listings.add(createListingFromData(matcher.group(2)));
         }
 
+        Collections.sort(listings);
+
+        System.out.println("Found listings data for item with id " + itemId + " for world " + world);
         return listings;
     }
 

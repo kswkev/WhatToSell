@@ -34,7 +34,6 @@ public class RestService {
 
             String output;
             String response = new String();
-            System.out.println("Output from Server .... \n");
             while ((output = br.readLine()) != null) {
                 response += output;
             }
@@ -44,8 +43,10 @@ public class RestService {
             return response;
 
         } catch (MalformedURLException e) {
+            System.out.println("MalformedURLException thrown: " + e.getMessage());
             throw new RuntimeException(e);
         } catch (IOException e) {
+            System.out.println("IOException thrown: " + e.getMessage());
             throw new RuntimeException(e);
         }
     }

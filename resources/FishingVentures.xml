@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<items>
+    <item id="4925">
+        <name>Crayfish</name>
+        <quantity>12</quantity>
+        <vendorBuysFor>1</vendorBuysFor>
+        <level>1</level>
+    </item>
+    <item id="4871">
+        <name>Finger Shrimp</name>
+        <quantity>9</quantity>
+        <vendorBuysFor>1</vendorBuysFor>
+        <level>4</level>
+    </item>
+    <item id="4930">
+        <name>Princess Trout</name>
+        <quantity>9</quantity>
+        <vendorBuysFor>1</vendorBuysFor>
+        <level>5</level>
+    </item>
+    <item id="5460">
+        <name>White Coral</name>
+        <quantity>9</quantity>
+        <vendorBuysFor>1</vendorBuysFor>
+        <level>5</level>
+    </item>
+</items>
