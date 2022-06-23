@@ -24,4 +24,76 @@
         <vendorBuysFor>1</vendorBuysFor>
         <level>5</level>
     </item>
+    <item id="4931">
+        <name>Dusk Goby</name>
+        <quantity>12</quantity>
+        <vendorBuysFor>1</vendorBuysFor>
+        <level>6</level>
+    </item>
+    <item id="4932">
+        <name>Pipira</name>
+        <quantity>12</quantity>
+        <vendorBuysFor>1</vendorBuysFor>
+        <level>7</level>
+    </item>
+    <item id="4933">
+        <name>Crimson Crayfish</name>
+        <quantity>12</quantity>
+        <vendorBuysFor>1</vendorBuysFor>
+        <level>8</level>
+    </item>
+    <item id="4876">
+        <name>Coral Butterfly</name>
+        <quantity>12</quantity>
+        <vendorBuysFor>1</vendorBuysFor>
+        <level>9</level>
+    </item>
+    <item id="4935">
+        <name>Brass Loach</name>
+        <quantity>12</quantity>
+        <vendorBuysFor>1</vendorBuysFor>
+        <level>10</level>
+    </item>
+    <item id="4936">
+        <name>Maiden Carp</name>
+        <quantity>9</quantity>
+        <vendorBuysFor>1</vendorBuysFor>
+        <level>11</level>
+    </item>
+    <item id="4879">
+        <name>Tiger Cod</name>
+        <quantity>12</quantity>
+        <vendorBuysFor>1</vendorBuysFor>
+        <level>14</level>
+    </item>
+    <item id="4880">
+        <name>Helmet Crab</name>
+        <quantity>9</quantity>
+        <vendorBuysFor>1</vendorBuysFor>
+        <level>16</level>
+    </item>
+    <item id="4881">
+        <name>Rothlyt Oyster</name>
+        <quantity>9</quantity>
+        <vendorBuysFor>1</vendorBuysFor>
+        <level>17</level>
+    </item>
+    <item id="4882">
+        <name>Navigator's Dagger</name>
+        <quantity>9</quantity>
+        <vendorBuysFor>1</vendorBuysFor>
+        <level>18</level>
+    </item>
+    <item id="4949">
+        <name>Bluebell Salmon</name>
+        <quantity>12</quantity>
+        <vendorBuysFor>1</vendorBuysFor>
+        <level>19</level>
+    </item>
+    <item id="4884">
+        <name>Razor Clam</name>
+        <quantity>9</quantity>
+        <vendorBuysFor>1</vendorBuysFor>
+        <level>20</level>
+    </item>
 </items>

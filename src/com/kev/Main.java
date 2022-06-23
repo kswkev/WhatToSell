@@ -1,7 +1,5 @@
 package com.kev;
 
-import java.util.List;
-
 public class Main {
 
     public static void main(String[] args) {
@@ -18,12 +16,16 @@ public class Main {
 
 //        ListingFactory.extractValues("\"lastReviewTime\":1654780753,\"pricePerUnit\":314,\"quantity\":1,\"stainID\":0,\"worldName\":\"Spriggan\",\"worldID\":85,\"creatorName\":\"\",\"creatorID\":null,\"hq\":false,\"isCrafted\":false,\"listingID\":null,\"materia\":[],\"onMannequin\":false,\"retainerCity\":1,\"retainerID\":\"71e53d0dea8ab39887231831f1cbd7e8a40cf79ccd7f6eb5e168cff3bfc17c82\",\"retainerName\":\"Framar\",\"sellerID\":\"8cdd633c9bc7f04404aa4e83a8ac88246be0c0c857af80ad891c46f0cfdb5e0d\",\"total\":314");
 
-        List<Item> items = ItemFactory.fetchFishingVentures();
-        for (Item item : items) {
-            Reporter.printItemDetailsForWorld(item, "Moogle");
-        }
+//        List<Item> items = ItemFactory.fetchFishingVentures();
+//        for (Item item : items) {
+//            Reporter.printItemDetailsForWorld(item, "Moogle");
+//        }
 //        System.out.println(items.get(0).getCheapistListingsMap().get("Moogle"));
 //        System.out.println(items);
+
+        Advisor advisor = new Advisor();
+
+        advisor.adviseOnFishingVentures("Moogle");
     }
 
 

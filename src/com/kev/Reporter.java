@@ -1,6 +1,7 @@
 package com.kev;
 
 import java.util.ArrayList;
+import java.util.List;
 import java.util.Map;
 
 public class Reporter {
@@ -58,5 +59,12 @@ public class Reporter {
         System.out.print("\t" + listing.getPricePerUnit());
         System.out.print("\t" + listing.getTotalCost());
         System.out.println("\t" + listing.getLastReview());
+    }
+
+    public static void printAdvise(List<Item> items, String reportType, String world, boolean hq) {
+        System.out.println("The following " + reportType + " are the top earners");
+        for (Item item : items) {
+            System.out.println("item " + item.getName() + " sells for " + item.calculateSellsForWithQuantity(hq, world));
+        }
     }
 }

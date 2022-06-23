@@ -90,6 +90,14 @@ public class Item {
         return cheapistHQListingsMap;
     }
 
+    public int calculateSellsForWithQuantity(boolean hq, String world) {
+        if (hq) {
+            return cheapistHQListingsMap.get(world).getPricePerUnit() * this.getQuantity();
+        } else {
+            return cheapistListingsMap.get(world).getPricePerUnit() * this.getQuantity();
+        }
+    }
+
     private void populateCheapistListingsMap() {
         Map<String, Listing> cheapistListingsMap = createCheapistListingMap(this.listingsMap, false);
         this.cheapistListingsMap = cheapistListingsMap;
