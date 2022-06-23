@@ -91,30 +91,30 @@ public class Item {
     }
 
     private void populateCheapistListingsMap() {
-        Map<String, Listing> cheapistListingsMap = new HashMap<String, Listing>();
-        for (Map.Entry<String, ArrayList<Listing>> entry : this.listingsMap.entrySet()) {
-            if (null != entry.getKey() && null != entry.getValue()) {
-                for (Listing listing : entry.getValue()) {
-                    if (!listing.isHq()) {
-                        cheapistListingsMap.put(entry.getKey(), listing);
-                    }
-                }
-            }
-        }
+        Map<String, Listing> cheapistListingsMap = createCheapistListingMap(this.listingsMap, false);
         this.cheapistListingsMap = cheapistListingsMap;
     }
 
-    private void populateCheapistHQListingsMap() {
+    private Map<String, Listing> createCheapistListingMap(Map<String, ArrayList<Listing>> listingsMap, boolean isHq) {
         Map<String, Listing> cheapistListingsMap = new HashMap<String, Listing>();
-        for (Map.Entry<String, ArrayList<Listing>> entry : this.listingsMap.entrySet()) {
+        for (Map.Entry<String, ArrayList<Listing>> entry : listingsMap.entrySet()) {
             if (null != entry.getKey() && null != entry.getValue()) {
+                Listing cheapestListing = null;
                 for (Listing listing : entry.getValue()) {
-                    if (listing.isHq()) {
-                        cheapistListingsMap.put(entry.getKey(), listing);
+                    if (listing.isHq() == isHq && (null == cheapestListing || cheapestListing.getPricePerUnit() > listing.getPricePerUnit())) {
+                        cheapestListing = listing;
                     }
+                }
+                if (null != cheapestListing) {
+                    cheapistListingsMap.put(entry.getKey(), cheapestListing);
                 }
             }
         }
+        return cheapistListingsMap;
+    }
+
+    private void populateCheapistHQListingsMap() {
+        Map<String, Listing> cheapistListingsMap = createCheapistListingMap(this.listingsMap, false);
         this.cheapistHQListingsMap = cheapistListingsMap;
     }
 
